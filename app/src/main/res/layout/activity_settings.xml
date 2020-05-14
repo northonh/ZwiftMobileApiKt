@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SettingsActivity">
+
+    <TextView
+        android:id="@+id/stageOffTv"
+        style="@style/TextViewStyle"
+        android:text="@string/stage_off"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/maxSpeedStageOffEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/maximum"
+        android:gravity="center_horizontal"
+        android:hint="@string/maximum"
+        android:inputType="numberDecimal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stageOffTv" />
+
+    <TextView
+        android:id="@+id/stageOneTv"
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stage_one"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxSpeedStageOffEt" />
+
+    <EditText
+        android:id="@+id/maxSpeedStageOneEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/maximum"
+        android:gravity="center_horizontal"
+        android:hint="@string/maximum"
+        android:inputType="numberDecimal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stageOneTv" />
+
+    <TextView
+        android:id="@+id/stageTwoTv"
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stage_two"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/maxSpeedStageOneEt" />
+
+    <EditText
+        android:id="@+id/maxSpeedStageTwoEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/maximum"
+        android:gravity="center_horizontal"
+        android:hint="@string/maximum"
+        android:inputType="numberDecimal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stageTwoTv" />
+
+    <ImageButton
+        android:id="@+id/saveBt"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:contentDescription="@string/save"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxSpeedStageTwoEt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
